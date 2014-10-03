@@ -3,8 +3,11 @@ TARGET := main
 
 all: $(TARGET)
 
-$(TARGET): $(SRC)
+$(TARGET): get
 	go build -o $@
+
+get: $(SRC)
+	go get
 
 clean:
 	$(RM) $(TARGET)
